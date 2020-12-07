@@ -1,0 +1,18 @@
+DROP TABLE tbl_reply;
+
+CREATE TABLE tbl_reply
+(
+    rid    NUMBER NOT NULL,
+    bid    NUMBER NOT NULL,
+    content_text    VARCHAR2(500) NOT NULL,
+    reg_id    VARCHAR2(100) NOT NULL,
+    reg_dt    Date NOT NULL,
+    edit_dt   Date NOT NULL
+);
+
+COMMENT ON COLUMN tbl_reply.rid is '일련번호';
+COMMENT ON COLUMN tbl_reply.bid is '게시물 일련번호';
+COMMENT ON COLUMN tbl_reply.conten_text is '댓글내용';
+COMMENT ON COLUMN tbl_reply.reg_id is '작성자';
+COMMENT ON COLUMN tbl_reply.reg_dt is '작성일';
+COMMENT ON COLUMN tbl_reply.edit_dt is '수정일';
